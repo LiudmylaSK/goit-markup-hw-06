@@ -147,9 +147,12 @@ body {
 
 .menu-link:hover,
 .menu-link:focus,
-.menu-link.active,
 .contact-link:hover,
 .contact-link:focus {
+  color: var(--accent-color);
+}
+
+.active-page {
   color: var(--accent-color);
 }
 
@@ -492,15 +495,16 @@ body {
   letter-spacing: 0.02em;
 }
 
+.social-media {
+  margin-right: 80px;
+  max-width: 208px;
+}
+
 .social-media .footer-text {
   margin-bottom: 16px;
   font-weight: 500;
 
   color: #fff;
-}
-
-.social-media {
-  max-width: 208px;
 }
 
 .footer-social-media {
@@ -534,6 +538,24 @@ body {
 .footer-social-media-link:hover,
 .footer-social-media-link:focus {
   background-color: #31d0aa;
+}
+
+.subscribe {
+}
+
+.subscribe-form {
+}
+
+.subscribe-label {
+}
+
+.subscribe-input-desc {
+}
+
+.subscribe-input {
+}
+
+.subscribe-btn {
 }
 
 /* PORTFOLIO.HTML */
@@ -689,6 +711,8 @@ body {
   width: 408px;
   min-height: 576px;
 
+  padding: 72px 24px 24px;
+
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -732,4 +756,76 @@ body {
   fill: currentColor;
 
   transition: fill var(--transition-hover-focus);
+}
+
+/* MODAL FORM */
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-form-text {
+  margin-bottom: 16px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  text-align: center;
+  letter-spacing: 0.02em;
+
+  color: #2e2f42;
+}
+
+.modal-form-field {
+  margin-bottom: 8px;
+}
+
+.modal-form-input-desc {
+  display: block;
+  font-size: 12px;
+  line-height: 1.17;
+
+  letter-spacing: 0.04em;
+
+  color: #8e8f99;
+
+  margin-bottom: 4px;
+}
+
+.modal-form-input {
+  width: 100%;
+  height: 40px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  padding-left: 38px;
+
+  /* color: #000; */
+}
+
+/* .modal-form-icons {
+  display: block;
+
+  background-color: #2e2f42;
+} */
+
+.modal-form-message {
+  width: 100%;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  resize: none;
+}
+
+.modal-foorm-check {
+}
+
+.modal-form-check-desc {
+}
+
+.modal-form-submit {
 }
