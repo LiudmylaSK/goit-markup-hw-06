@@ -9,8 +9,9 @@
   --basic-bg-color: #fff;
   --secondary-bg-color: #f4f4fd;
   --hero-text-color: #fff;
+  --hero-footer-bg-color: #2e2f42;
   --footer-text-color: #f4f4fd;
-  --footer-bg-color: #2e2f42;
+
   --border-color: #e7e9fc;
   --transition-hover-focus: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --overlay-text-color: #f4f4fd;
@@ -165,7 +166,7 @@ body {
   left: 0px;
   bottom: -1px;
 
-  background: #404bbf;
+  background: var(--accent-color);
 
   border-radius: 2px;
 }
@@ -207,7 +208,7 @@ body {
   margin-right: auto;
   margin-left: auto;
 
-  background-color: #2e2f42;
+  background-color: var(--hero-footer-bg-color);
 
   text-align: center;
 
@@ -465,7 +466,7 @@ body {
   padding-top: 100px;
   padding-bottom: 100px;
 
-  background-color: var(--footer-bg-color);
+  background-color: var(--hero-footer-bg-color);
 }
 
 .main-footer {
@@ -541,21 +542,111 @@ body {
 }
 
 .subscribe {
+  min-width: 453px;
 }
 
 .subscribe-form {
-}
-
-.subscribe-label {
+  display: flex;
+  align-items: flex-end;
 }
 
 .subscribe-input-desc {
+  display: block;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  letter-spacing: 0.02em;
+
+  color: #fff;
+
+  margin-bottom: 16px;
 }
 
 .subscribe-input {
+  width: 264px;
+  height: 40px;
+  margin-right: 24px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 4px;
+
+  padding-left: 16px;
+
+  background-color: var(--hero-footer-bg-color);
+  color: #fff;
+
+  border: 1px solid #fff;
+  filter: drop-shadow (0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  transition: border-color var(--transition-hover-focus);
+}
+
+.subscribe-input:focus {
+  border: 1px solid #4d5ae5;
+}
+
+.subscribe-input::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
+
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.04em;
+
+  color: #fff;
 }
 
 .subscribe-btn {
+  display: flex;
+
+  border: none;
+  border-radius: 4px;
+
+  padding: 8px 24px;
+
+  min-width: 165px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  letter-spacing: 0.04em;
+
+  background: #4d5ae5;
+  color: #fff;
+
+  transition: ackground-color var(--transition-hover-focus);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background-color: var(--accent-color);
+}
+
+.subscribe-btn-wrapper {
+  display: flex;
+  align-items: center;
+
+  position: relative;
+
+  color: #fff;
+}
+
+.subscribe-icon {
+  position: absolute;
+
+  top: 50%;
+  right: 24px;
+
+  transform: translateY(-50%);
+
+  fill: currentColor;
 }
 
 /* PORTFOLIO.HTML */
@@ -735,7 +826,7 @@ body {
 
   padding: 0;
   background-color: #e7e9fc;
-  color: #2e2f42;
+  color: var(--secondary-text-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
 
   border-radius: 50%;
@@ -775,7 +866,7 @@ body {
   text-align: center;
   letter-spacing: 0.02em;
 
-  color: #2e2f42;
+  color: var(--secondary-text-color);
 }
 
 .modal-form-field {
@@ -862,10 +953,44 @@ body {
   color: rgba(46, 47, 66, 0.4);
 }
 
-.modal-form-check {
+.modal-form-fake-checkbox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
+  cursor: pointer;
+
+  color: transparent;
+
+  margin-right: 8px;
+
+  transition: background-color var(--transition-hover-focus),
+    color var(--transition-hover-focus);
+}
+
+.custom-check-icon {
+  fill: currentColor;
+}
+
+.modal-form-check:checked + .modal-form-fake-checkbox {
+  background-color: var(--accent-color);
+  color: #f4f4fd;
+}
+
+.modal-form-check:focus + .modal-form-fake-checkbox {
+  border-color: #4d5ae5;
 }
 
 .modal-form-check-desc {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
@@ -881,5 +1006,32 @@ body {
   color: #4d5ae5;
 }
 
-.modal-form-submit {
+.modal-form-submit-btn {
+  display: block;
+  align-self: center;
+  padding: 16px 32px;
+  min-width: 169px;
+
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border: none;
+  border-radius: 4px;
+
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+
+  text-align: center;
+  letter-spacing: 0.04em;
+
+  color: #fff;
+
+  transition: background-color var(--transition-hover-focus);
+}
+
+.modal-form-submit-btn:hover,
+.modal-form-submit-btn:focus {
+  background-color: var(--accent-color);
 }
