@@ -709,7 +709,7 @@ body {
   left: 50%;
 
   width: 408px;
-  min-height: 576px;
+  min-height: 584px;
 
   padding: 72px 24px 24px;
 
@@ -794,6 +794,13 @@ body {
   margin-bottom: 4px;
 }
 
+.modal-form-input-wrapper {
+  display: block;
+  position: relative;
+
+  color: var(--secondary-text-color);
+}
+
 .modal-form-input {
   width: 100%;
   height: 40px;
@@ -803,28 +810,75 @@ body {
 
   padding-left: 38px;
 
-  /* color: #000; */
+  color: #000;
+
+  transition: border-color var(--transition-hover-focus);
 }
 
-/* .modal-form-icons {
-  display: block;
+.modal-form-input:focus {
+  outline: none;
+  border-color: #4d5ae5;
+}
 
-  background-color: #2e2f42;
-} */
+.modal-form-icons {
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform: translate(0, -50%);
+
+  fill: currentColor;
+
+  transition: fill var(--transition-hover-focus);
+}
+
+.modal-form-input:focus + .modal-form-icons {
+  fill: #4d5ae5;
+}
 
 .modal-form-message {
-  width: 100%;
+  resize: none;
 
+  width: 100%;
+  height: 120px;
+
+  padding: 8px 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
-  resize: none;
+  transition: border-color var(--transition-hover-focus);
 }
 
-.modal-foorm-check {
+.modal-form-message:focus {
+  outline: none;
+  border-color: #4d5ae5;
+}
+
+.modal-form-message::placeholder {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.modal-form-check {
 }
 
 .modal-form-check-desc {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: #8e8f99;
+}
+
+.modal-form-check-link {
+  font-size: 12px;
+  line-height: 1.33;
+  letter-spacing: 0.04em;
+  text-decoration-line: underline;
+
+  color: #4d5ae5;
 }
 
 .modal-form-submit {
