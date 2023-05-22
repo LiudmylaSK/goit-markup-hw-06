@@ -52,19 +52,21 @@ img {
 }
 
 body {
+  margin: 0;
+
   font-family: var(--main-font-family);
   color: var(--primary-text-color);
-  background-color: var(--basic-bg-color);
 
-  margin: 0;
+  background-color: var(--basic-bg-color);
 }
 
 .container {
-  width: 1158px;
   padding-left: 15px;
   padding-right: 15px;
   margin-right: auto;
   margin-left: auto;
+
+  width: 1158px;
 }
 
 .section {
@@ -131,17 +133,16 @@ body {
 
 .menu-link {
   position: relative;
-
   display: block;
   padding-top: 24px;
   padding-bottom: 24px;
-
-  color: var(--secondary-text-color);
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color);
 
   transition: color var(--transition-hover-focus);
 }
@@ -158,13 +159,14 @@ body {
 }
 
 .menu-link.active::after {
-  content: "";
-  width: 100%;
-  height: 4px;
-
   position: absolute;
   left: 0px;
   bottom: -1px;
+
+  content: "";
+
+  width: 100%;
+  height: 4px;
 
   background: var(--accent-color);
 
@@ -186,12 +188,12 @@ body {
   padding-top: 24px;
   padding-bottom: 24px;
 
-  color: var(--primary-text-color);
-
   font-style: normal;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
 
   transition: color var(--transition-hover-focus);
 }
@@ -203,15 +205,15 @@ body {
 .hero {
   padding-top: 188px;
   padding-bottom: 188px;
-  max-width: 1440px;
-  height: 600px;
   margin-right: auto;
   margin-left: auto;
 
-  background-color: var(--hero-footer-bg-color);
+  max-width: 1440px;
+  height: 600px;
 
   text-align: center;
 
+  background-color: var(--hero-footer-bg-color);
   background-image: linear-gradient(
       rgba(46, 47, 66, 0.7),
       rgba(46, 47, 66, 0.7)
@@ -230,30 +232,33 @@ body {
 
   max-width: 496px;
 
-  color: var(--hero-text-color);
-
   font-weight: 700;
   font-size: 56px;
   line-height: 1.07;
   letter-spacing: 0.02em;
+
+  color: var(--hero-text-color);
 }
 
 .hero-btn {
   display: block;
   margin: 0 auto;
   padding: 16px 32px;
-  min-width: 169px;
 
-  border: none;
-  border-radius: 4px;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  background-color: #4d5ae5;
-  color: var(--hero-text-color);
+  min-width: 169px;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+
+  color: var(--hero-text-color);
+
+  background-color: #4d5ae5;
+
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition: background-color var(--transition-hover-focus);
 }
@@ -279,32 +284,33 @@ body {
   align-items: center;
   justify-content: center;
 
-  height: 112px;
   padding: 24px 100px;
   margin-bottom: 8px;
 
-  border-radius: 4px;
+  height: 112px;
 
   background-color: var(--secondary-bg-color);
+
+  border-radius: 4px;
 }
 
 .features-item-title {
   margin-bottom: 8px;
 
-  color: var(--secondary-text-color);
-
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color);
 }
 
 .features-text {
-  color: var(--primary-text-color);
-
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
 }
 
 /* WHAT ARE WE DOING */
@@ -325,14 +331,14 @@ body {
 .section-title {
   margin-bottom: 72px;
 
-  color: var(--secondary-text-color);
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
   text-align: center;
   letter-spacing: 0.02em;
   text-transform: capitalize;
+
+  color: var(--secondary-text-color);
 }
 
 /* OUR TEAM */
@@ -363,24 +369,24 @@ body {
 .team-name {
   margin-bottom: 8px;
 
-  color: var(--secondary-text-color);
-
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color);
 }
 
 .team-text {
   margin-bottom: 8px;
 
-  color: var(--primary-text-color);
-
   font-size: 16px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
 }
 
 .team-social {
@@ -402,10 +408,11 @@ body {
   width: 100%;
   height: 100%;
 
-  border-radius: 50%;
-
   color: #f4f4fd;
+
   background-color: #4d5ae5;
+
+  border-radius: 50%;
 
   transition: background-color var(--transition-hover-focus);
 }
@@ -424,7 +431,6 @@ body {
 .customers-list {
   display: flex;
   justify-content: center;
-
   gap: 24px;
 }
 .customers-item {
@@ -440,9 +446,10 @@ body {
   width: 100%;
   height: 100%;
 
+  color: #8e8f99;
+
   border: 1px solid #8e8f99;
   border-radius: 4px;
-  color: #8e8f99;
 
   transition: border-color var(--transition-hover-focus),
     color var(--transition-hover-focus);
@@ -456,7 +463,6 @@ body {
 
 .customer-icon {
   fill: currentColor;
-
   transition: fill var(--transition-hover-focus);
 }
 
@@ -489,11 +495,11 @@ body {
 }
 
 .footer-text {
-  color: var(--footer-text-color);
-
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  color: var(--footer-text-color);
 }
 
 .social-media {
@@ -503,8 +509,8 @@ body {
 
 .social-media .footer-text {
   margin-bottom: 16px;
-  font-weight: 500;
 
+  font-weight: 500;
   color: #fff;
 }
 
@@ -528,10 +534,10 @@ body {
   width: 100%;
   height: 100%;
 
-  border-radius: 50%;
-
   color: #f4f4fd;
   background-color: #4d5ae5;
+
+  border-radius: 50%;
 
   transition: background-color var(--transition-hover-focus);
 }
@@ -552,33 +558,28 @@ body {
 
 .subscribe-input-desc {
   display: block;
+  margin-bottom: 16px;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-
   letter-spacing: 0.02em;
 
   color: #fff;
-
-  margin-bottom: 16px;
 }
 
 .subscribe-input {
-  width: 264px;
-  height: 40px;
   margin-right: 24px;
-
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-
   padding-left: 16px;
 
-  background-color: var(--hero-footer-bg-color);
+  width: 264px;
+  height: 40px;
+
   color: #fff;
 
+  background-color: var(--hero-footer-bg-color);
+
   border: 1px solid #fff;
-  filter: drop-shadow (0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
 
   transition: border-color var(--transition-hover-focus);
@@ -589,23 +590,19 @@ body {
 }
 
 .subscribe-input::placeholder {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 2;
-
   display: flex;
   align-items: center;
   letter-spacing: 0.04em;
+
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 2;
 
   color: #fff;
 }
 
 .subscribe-btn {
   display: flex;
-
-  border: none;
-  border-radius: 4px;
-
   padding: 8px 24px;
 
   min-width: 165px;
@@ -615,13 +612,16 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-
   letter-spacing: 0.04em;
 
-  background: #4d5ae5;
   color: #fff;
 
-  transition: ackground-color var(--transition-hover-focus);
+  background: #4d5ae5;
+
+  border: none;
+  border-radius: 4px;
+
+  transition: background-color var(--transition-hover-focus);
 }
 
 .subscribe-btn:hover,
@@ -632,7 +632,6 @@ body {
 .subscribe-btn-wrapper {
   display: flex;
   align-items: center;
-
   position: relative;
 
   color: #fff;
@@ -640,10 +639,8 @@ body {
 
 .subscribe-icon {
   position: absolute;
-
   top: 50%;
   right: 24px;
-
   transform: translateY(-50%);
 
   fill: currentColor;
@@ -663,15 +660,18 @@ body {
 .filters-btn {
   display: flex;
   padding: 12px 24px;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  background-color: var(--secondary-bg-color);
-  color: #4d5ae5;
 
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.04em;
+
+  color: #4d5ae5;
+
+  background-color: var(--secondary-bg-color);
+
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
 
   transition: background-color var(--transition-hover-focus),
     color var(--transition-hover-focus),
@@ -681,8 +681,9 @@ body {
 
 .filters-btn:hover,
 .filters-btn:focus {
-  background-color: var(--accent-color);
   color: #fff;
+  background-color: var(--accent-color);
+
   border: 1px solid transparent;
 
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08),
@@ -723,22 +724,22 @@ body {
 }
 
 .project-overlay {
-  padding: 40px 32px;
   position: absolute;
-
+  padding: 40px 32px;
   top: 0;
   left: 0;
+  overflow: auto;
+
   width: 100%;
   height: 100%;
-  overflow: auto;
 
   font-size: 16px;
   line-height: 1.5;
-
   letter-spacing: 0.02em;
 
-  background-color: #4d5ae5;
   color: var(--overlay-text-color);
+
+  background-color: #4d5ae5;
 
   transform: translate(0, 100%);
   transition: transform var(--transition-hover-focus);
@@ -757,20 +758,21 @@ body {
 
 .projects-name {
   margin-bottom: 8px;
-  color: var(--secondary-text-color);
 
   font-weight: 500;
   font-size: 20px;
   line-height: 1.2;
   letter-spacing: 0.02em;
+
+  color: var(--secondary-text-color);
 }
 
 .projects-type {
-  color: var(--primary-text-color);
-
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
+
+  color: var(--primary-text-color);
 }
 
 /* MODAL WINDOW */
@@ -780,8 +782,10 @@ body {
   top: 0;
   left: 0;
   z-index: 100;
+
   width: 100%;
   height: 100%;
+
   background-color: rgba(46, 47, 66, 0.4);
 
   transition: opacity var(--transition-hover-focus),
@@ -798,15 +802,15 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
+  padding: 72px 24px 24px;
 
   width: 408px;
   min-height: 584px;
 
-  padding: 72px 24px 24px;
-
   background-color: #fcfcfc;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
+
   border-radius: 4px;
 
   transform: translate(-50%, -50%);
@@ -821,14 +825,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0;
+
   width: 24px;
   height: 24px;
 
-  padding: 0;
-  background-color: #e7e9fc;
   color: var(--secondary-text-color);
-  border: 1px solid rgba(0, 0, 0, 0.1);
 
+  background-color: #e7e9fc;
+
+  border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
 
   transition: background-color var(--transition-hover-focus),
@@ -837,10 +843,11 @@ body {
 
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-  border: none;
+  color: #fff;
 
   background-color: var(--accent-color);
-  color: #fff;
+
+  border: none;
 }
 
 .modal-close-btn-icon {
@@ -862,7 +869,6 @@ body {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
-
   text-align: center;
   letter-spacing: 0.02em;
 
@@ -875,14 +881,13 @@ body {
 
 .modal-form-input-desc {
   display: block;
+  margin-bottom: 4px;
+
   font-size: 12px;
   line-height: 1.17;
-
   letter-spacing: 0.04em;
 
   color: #8e8f99;
-
-  margin-bottom: 4px;
 }
 
 .modal-form-input-wrapper {
@@ -893,15 +898,15 @@ body {
 }
 
 .modal-form-input {
+  padding-left: 38px;
+
   width: 100%;
   height: 40px;
 
+  color: #000;
+
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
-
-  padding-left: 38px;
-
-  color: #000;
 
   transition: border-color var(--transition-hover-focus);
 }
@@ -915,6 +920,7 @@ body {
   position: absolute;
   top: 50%;
   left: 16px;
+
   transform: translate(0, -50%);
 
   fill: currentColor;
@@ -927,12 +933,12 @@ body {
 }
 
 .modal-form-message {
-  resize: none;
+  padding: 8px 16px;
 
   width: 100%;
   height: 120px;
+  resize: none;
 
-  padding: 8px 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
 
@@ -957,17 +963,17 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-right: 8px;
+
   width: 16px;
   height: 16px;
+
+  color: transparent;
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
 
   cursor: pointer;
-
-  color: transparent;
-
-  margin-right: 8px;
 
   transition: background-color var(--transition-hover-focus),
     color var(--transition-hover-focus);
@@ -978,8 +984,8 @@ body {
 }
 
 .modal-form-check:checked + .modal-form-fake-checkbox {
-  background-color: var(--accent-color);
   color: #f4f4fd;
+  background-color: var(--accent-color);
 }
 
 .modal-form-check:focus + .modal-form-fake-checkbox {
@@ -994,6 +1000,7 @@ body {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+
   color: #8e8f99;
 }
 
@@ -1001,7 +1008,6 @@ body {
   font-size: 12px;
   line-height: 1.33;
   letter-spacing: 0.04em;
-  text-decoration-line: underline;
 
   color: #4d5ae5;
 }
@@ -1010,12 +1016,8 @@ body {
   display: block;
   align-self: center;
   padding: 16px 32px;
-  min-width: 169px;
 
-  background: #4d5ae5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border: none;
-  border-radius: 4px;
+  min-width: 169px;
 
   font-family: "Roboto";
   font-style: normal;
@@ -1027,6 +1029,12 @@ body {
   letter-spacing: 0.04em;
 
   color: #fff;
+
+  background: #4d5ae5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+
+  border: none;
+  border-radius: 4px;
 
   transition: background-color var(--transition-hover-focus);
 }
