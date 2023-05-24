@@ -499,17 +499,19 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  font-weight: 500;
 
   color: var(--footer-text-color);
 }
 
-.social-media {
+.social-media-column {
   margin-right: 80px;
   max-width: 208px;
 }
 
-.footer-text {
+.social-media-column-txt,
+.subscribe-slogan {
+  font-weight: 500;
+  color: #fff;
 }
 
 .footer-social-media {
