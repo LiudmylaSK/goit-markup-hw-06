@@ -15,6 +15,8 @@
   --border-color: #e7e9fc;
   --transition-hover-focus: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   --overlay-text-color: #f4f4fd;
+  --modal-form-txt: #8e8f99;
+  --modal-form-border-color: #4d5ae5;
 }
 
 .list {
@@ -861,11 +863,13 @@ body {
   color: var(--secondary-text-color);
 }
 
-.modal-form-field {
+.modal-form-wrapper {
   margin-bottom: 8px;
 }
 
 .modal-form-input-desc {
+  margin-bottom: 8px;
+
   display: block;
   margin-bottom: 4px;
 
@@ -876,9 +880,9 @@ body {
   color: #8e8f99;
 }
 
-.modal-form-input-wrapper {
-  display: block;
+.modal-form-field-wrapper {
   position: relative;
+  margin-bottom: 8px;
 
   color: var(--secondary-text-color);
 }
@@ -891,15 +895,17 @@ body {
 
   color: #000;
 
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  background-color: transparent;
+
+  border: 1px solid rgba(46, 47, 66, 0.2);
   border-radius: 4px;
+  outline: transparent;
 
   transition: border-color var(--transition-hover-focus);
 }
 
 .modal-form-input:focus {
-  outline: none;
-  border-color: #4d5ae5;
+  border-color: var(--modal-form-border-color);
 }
 
 .modal-form-icons {
@@ -907,7 +913,7 @@ body {
   top: 50%;
   left: 16px;
 
-  transform: translate(0, -50%);
+  transform: translateY(-50%);
 
   fill: currentColor;
 
@@ -925,28 +931,39 @@ body {
   height: 120px;
   resize: none;
 
-  border: 1px solid rgba(46, 47, 66, 0.4);
-  border-radius: 4px;
-
-  transition: border-color var(--transition-hover-focus);
-}
-
-.modal-form-message:focus {
-  outline: none;
-  border-color: #4d5ae5;
-}
-
-.modal-form-message::placeholder {
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
 
   color: rgba(46, 47, 66, 0.4);
+
+  background-color: transparent;
+
+  border: 1px solid rgba(46, 47, 66, 0.2);
+  border-radius: 4px;
+  outline: transparent;
+
+  transition: border-color var(--transition-hover-focus);
+}
+
+.modal-form-message:focus {
+  border-color: var(--modal-form-border-color);
+}
+
+.modal-form-check-wrapper {
+  margin-bottom: 24px;
+}
+
+.modal-form-check-desc {
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+
+  color: var(--modal-form-txt);
 }
 
 .modal-form-fake-checkbox {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   margin-right: 8px;
@@ -954,7 +971,7 @@ body {
   width: 16px;
   height: 16px;
 
-  color: transparent;
+  fill: transparent;
 
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 2px;
@@ -965,29 +982,16 @@ body {
     color var(--transition-hover-focus);
 }
 
-.custom-check-icon {
-  fill: currentColor;
-}
-
-.modal-form-check:checked + .modal-form-fake-checkbox {
-  color: #f4f4fd;
+.modal-form-check:checked + .modal-form-check-desc .modal-form-fake-checkbox {
+  fill: #fff;
   background-color: var(--accent-color);
+
+  border: none;
+  border-color: var(--modal-form-border-color);
 }
 
-.modal-form-check:focus + .modal-form-fake-checkbox {
-  border-color: #4d5ae5;
-}
-
-.modal-form-check-desc {
-  display: flex;
-  align-items: center;
-  margin-bottom: 24px;
-
-  font-size: 12px;
-  line-height: 1.17;
-  letter-spacing: 0.04em;
-
-  color: #8e8f99;
+.modal-form-check:focus + .modal-form-check-desc .modal-form-fake-checkbox {
+  border-color: var(--modal-form-border-color);
 }
 
 .modal-form-check-link {
@@ -1005,7 +1009,7 @@ body {
 
   min-width: 169px;
 
-  font-family: "Roboto";
+  font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
