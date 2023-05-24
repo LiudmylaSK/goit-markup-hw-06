@@ -982,10 +982,10 @@ body {
 }
 
 .modal-form-check:checked + .modal-form-check-desc .modal-form-fake-checkbox {
-  fill: #fff;
-  background-color: #404bbf;
+  background-color: var(--accent-color);
 
   border: none;
+  fill: #fff;
   border-color: var(--accent-color);
 }
 
