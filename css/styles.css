@@ -919,6 +919,10 @@ body {
   fill: #4d5ae5;
 }
 
+.modal-form-comment-wrapper {
+  margin-bottom: 16px;
+}
+
 .modal-form-message {
   padding: 8px 16px;
 
@@ -968,7 +972,7 @@ body {
 
   fill: transparent;
 
-  border: 1px solid rgba(46, 47, 66, 0.4);
+  border: 1px solid #2e2f42;
   border-radius: 2px;
 
   cursor: pointer;
@@ -982,11 +986,11 @@ body {
   background-color: var(--accent-color);
 
   border: none;
-  border-color: var(--modal-form-border-color);
+  border-color: var(--accent-color);
 }
 
 .modal-form-check:focus + .modal-form-check-desc .modal-form-fake-checkbox {
-  border-color: var(--modal-form-border-color);
+  border-color: var(--accent-color);
 }
 
 .modal-form-check-link {
